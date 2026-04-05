@@ -154,12 +154,12 @@ const resolvers = {
     // Add Todo
     addTodo: async (parent, { request }, context) => {
       const { dataSources } = context;
-      requireAuth(context);
+      const currentUser = requireAuth(context);
 
       try {
         const newTodo = await dataSources.todos.createTodo({
           ...request,
-          user: request.userId,
+          user: currentUser.userId,
         });
         return {
           success: true,

@@ -80,8 +80,6 @@ mutation AddTodo {
   addTodo(
     request: {
       title: "Complete GraphQL Lab"
-      status: PENDING
-      userId: "USER_ID_HERE"
     }
   ) {
     success

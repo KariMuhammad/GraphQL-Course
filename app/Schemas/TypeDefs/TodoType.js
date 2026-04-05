@@ -12,8 +12,8 @@ type Todo implements EntityResponse {
 }
 
 input TodoCreateRequest {
-    ${TodoBody}
-    userId: ID!
+    title: String!
+    status: TodoStatus
 }
 
 type TodoCreateResponse implements JsonResponse {

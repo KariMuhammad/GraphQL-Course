@@ -30,7 +30,7 @@ const seedData = async () => {
             if (userId) {
                 const todo = new Todo({
                     title: todoData.title,
-                    status: todoData.completed ? 'completed' : 'pending',
+                    status: todoData.completed ? 'COMPLETED' : 'PENDING',
                     user: userId
                 });
                 await todo.save();

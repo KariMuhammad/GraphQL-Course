@@ -11,8 +11,8 @@ const TodoSchema = new Schema({
     },
     status: {
         type: String,
-        enum: ['pending', 'in-progress', 'completed'],
-        default: 'pending'
+        enum: ['PENDING', 'IN_PROGRESS', 'COMPLETED'],
+        default: 'PENDING'
     },
     user: {
         type: Schema.Types.ObjectId,
